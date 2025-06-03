@@ -6,6 +6,130 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-brand">Alex Wario</div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#songs">Songs</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- Profile Image -->
+    <img src="HeadshotHighDef.jpg" alt="Alex Wario headshot" class="hero-headshot">
+    <h1>Welcome to My Personal Site</h1>
+    <p>Hi! I'm Alex Wario, a web development student.</p>
+  </section>
+
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently learning web development in college. I enjoy creating simple and useful websites.
+    </p>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <!-- Carousel container for skills -->
+    <div class="carousel-container">
+      <button class="carousel-btn" id="prevSkillBtn" aria-label="Previous Skill">&#8592;</button>
+      <div class="skills-cards">
+        <div class="skill-card">
+          <img src="html5-brands.svg" alt="HTML5 icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+          HTML
+        </div>
+        <div class="skill-card">
+          <img src="css-brands.svg" alt="CSS3 icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+          CSS
+        </div>
+        <div class="skill-card">
+          <img src="js-brands.svg" alt="JavaScript icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+          JavaScript
+        </div>
+        <div class="skill-card">
+          <img src="java-brands.svg" alt="Java icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+          Java
+        </div>
+        <div class="skill-card">
+          <img src="python-brands.svg" alt="Python icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+          Python
+        </div>
+      </div>
+      <button class="carousel-btn" id="nextSkillBtn" aria-label="Next Skill">&#8594;</button>
+    </div>
+    <!-- Simple carousel script for skills -->
+    <script>
+      // Get all skill cards and buttons
+      const skillCards = document.querySelectorAll('.skill-card');
+      const prevSkillBtn = document.getElementById('prevSkillBtn');
+      const nextSkillBtn = document.getElementById('nextSkillBtn');
+      let currentSkill = 0; // Start with the first skill
+
+
+      // Function to show only the current skill card
+      function showSkill(index) {
+        skillCards.forEach((card, i) => {
+          card.style.display = i === index ? 'inline-block' : 'none';
+        });
+      }
+
+
+      // Show the first skill at the start
+      showSkill(currentSkill);
+
+
+      // When the user clicks the previous button
+      prevSkillBtn.onclick = function() {
+        currentSkill = (currentSkill - 1 + skillCards.length) % skillCards.length;
+        showSkill(currentSkill);
+      };
+
+
+      // When the user clicks the next button
+      nextSkillBtn.onclick = function() {
+        currentSkill = (currentSkill + 1) % skillCards.length;
+        showSkill(currentSkill);
+      };
+    </script>
+  </section>
+
+
+  <!-- Interests Section -->
+  <section id="interests">
+    <h2>Interests</h2>
+    <div class="interests-cards">
+      <div class="interest-card">Coding</div>
+      <div class="interest-card">Music</div>
+      <div class="interest-card">Reading</div>
+      <div class="interest-card">Drawing</div>
+      <div class="interest-card">Soccer</div>
+      <div class="interest-card">Coaching</div>
+      <div class="interest-card">Boxing</div>
+      <div class="interest-card">Running</div>
+      <div class="interest-card">Guitar</div>
+      <div class="interest-card">Working Out</div>
+    </div>
+  </section>
+
+
+  <!-- Songs Section -->
+  <section id="songs">
+    <h2>Favorite Songs</h2>
+    <div class="songs-cards">
+      <div class="song-card">Peekaboo - Kendrick Lamar</div>
+      <div class="song-card">WRK - JID</div>
+      <div class="song-card">Not Like Us - Kendrick Lamar</div>
+    </div>
+  </section>
 </body>
 </html>
