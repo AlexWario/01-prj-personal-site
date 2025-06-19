@@ -2,134 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Wario - Personal Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-brand">Alex Wario</div>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#songs">Songs</a></li>
-    </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+    <div class="container-fluid justify-content-center">
+      <!-- Removed navbar-brand for centering -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+          <li class="nav-item"><a class="nav-link" href="#songs">Songs</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-
   <!-- Hero Section -->
-  <section id="hero">
-    <!-- Profile Image -->
-    <img src="HeadshotHighDef.jpg" alt="Alex Wario headshot" class="hero-headshot">
-    <h1>Welcome to My Personal Site</h1>
-    <p>Hi! I'm Alex Wario, a web development student.</p>
+  <section id="hero" class="container-fluid text-center">
+    <img src="HeadshotHighDef.jpg" alt="Alex Wario headshot" class="hero-headshot img-fluid">
+    <h1 class="display-4">Christian Alejandro Wario Cervantes</h1>
+    <p class="lead">Hi! I'm Alex Wario, a computer science student.</p>
   </section>
 
+  <!-- About Me -->
+  <div class="container">
+    <section id="about" class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>About Me</h2>
+        <p>I'm a detail-oriented and driven computer science student with a wide range of experience that gives me a unique edge in the field. Alongside my technical skills in programming, web development, and data analysis, I've built strong communication and leadership abilities through roles in social work, customer service, and coaching. I've led teams, worked directly with people from diverse backgrounds, and learned how to explain complex ideas in simple, clear ways. I'm fluent in Spanish and currently developing my front-end skills further through Intel's web development program. Because of my mix of technical knowledge and real-world experience working with people, I bring a well-rounded and practical approach to any team I join.</p>
+      </div>
+    </section>
+  </div>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am currently learning web development in college. I enjoy creating simple and useful websites.
-    </p>
-  </section>
-
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <!-- Carousel container for skills -->
-    <div class="carousel-container">
-      <button class="carousel-btn" id="prevSkillBtn" aria-label="Previous Skill">&#8592;</button>
-      <div class="skills-cards">
-        <div class="skill-card">
-          <img src="html5-brands.svg" alt="HTML5 icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
-          HTML
-        </div>
-        <div class="skill-card">
-          <img src="css-brands.svg" alt="CSS3 icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
-          CSS
-        </div>
-        <div class="skill-card">
-          <img src="js-brands.svg" alt="JavaScript icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
-          JavaScript
-        </div>
-        <div class="skill-card">
-          <img src="java-brands.svg" alt="Java icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
-          Java
-        </div>
-        <div class="skill-card">
-          <img src="python-brands.svg" alt="Python icon" class="skill-icon" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
-          Python
+  <!-- Skills -->
+  <div class="container">
+    <section id="skills" class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Skills</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn btn" id="prevSkillBtn">&#8592;</button>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <img src="html5-brands.svg" alt="HTML5" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+              HTML
+            </div>
+            <div class="skill-card">
+              <img src="css-brands.svg" alt="CSS3" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+              CSS
+            </div>
+            <div class="skill-card">
+              <img src="js-brands.svg" alt="JavaScript" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+              JavaScript
+            </div>
+            <div class="skill-card">
+              <img src="java-brands.svg" alt="Java" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+              Java
+            </div>
+            <div class="skill-card">
+              <img src="python-brands.svg" alt="Python" style="width:32px; height:32px; vertical-align:middle; margin-right:8px;">
+              Python
+            </div>
+          </div>
+          <button class="carousel-btn btn" id="nextSkillBtn">&#8594;</button>
         </div>
       </div>
-      <button class="carousel-btn" id="nextSkillBtn" aria-label="Next Skill">&#8594;</button>
-    </div>
-    <!-- Simple carousel script for skills -->
-    <script>
-      // Get all skill cards and buttons
-      const skillCards = document.querySelectorAll('.skill-card');
-      const prevSkillBtn = document.getElementById('prevSkillBtn');
-      const nextSkillBtn = document.getElementById('nextSkillBtn');
-      let currentSkill = 0; // Start with the first skill
+    </section>
+  </div>
 
+  <!-- Interests -->
+  <div class="container">
+    <section id="interests" class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Interests</h2>
+        <div class="interests-cards">
+          <div class="interest-card">Coding</div>
+          <div class="interest-card">Music</div>
+          <div class="interest-card">Reading</div>
+          <div class="interest-card">Drawing</div>
+          <div class="interest-card">Soccer</div>
+          <div class="interest-card">Coaching</div>
+          <div class="interest-card">Boxing</div>
+          <div class="interest-card">Running</div>
+          <div class="interest-card">Guitar</div>
+          <div class="interest-card">Working Out</div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-      // Function to show only the current skill card
-      function showSkill(index) {
-        skillCards.forEach((card, i) => {
-          card.style.display = i === index ? 'inline-block' : 'none';
-        });
-      }
+  <!-- Songs -->
+  <div class="container">
+    <section id="songs" class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Favorite Songs</h2>
+        <div class="songs-cards">
+          <div class="song-card">Peekaboo - Kendrick Lamar</div>
+          <div class="song-card">WRK - JID</div>
+          <div class="song-card">Not Like Us - Kendrick Lamar</div>
+        </div>
+      </div>
+    </section>
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Skills carousel functionality
+    const skillCards = document.querySelectorAll('.skill-card');
+    const prevBtn = document.getElementById('prevSkillBtn');
+    const nextBtn = document.getElementById('nextSkillBtn');
+    let currentSkill = 0;
 
-      // Show the first skill at the start
+    function showSkill(index) {
+      skillCards.forEach((card, i) => {
+        card.style.display = i === index ? 'inline-block' : 'none';
+      });
+    }
+
+    showSkill(currentSkill);
+
+    prevBtn.onclick = () => {
+      currentSkill = (currentSkill - 1 + skillCards.length) % skillCards.length;
       showSkill(currentSkill);
+    };
 
-
-      // When the user clicks the previous button
-      prevSkillBtn.onclick = function() {
-        currentSkill = (currentSkill - 1 + skillCards.length) % skillCards.length;
-        showSkill(currentSkill);
-      };
-
-
-      // When the user clicks the next button
-      nextSkillBtn.onclick = function() {
-        currentSkill = (currentSkill + 1) % skillCards.length;
-        showSkill(currentSkill);
-      };
-    </script>
-  </section>
-
-
-  <!-- Interests Section -->
-  <section id="interests">
-    <h2>Interests</h2>
-    <div class="interests-cards">
-      <div class="interest-card">Coding</div>
-      <div class="interest-card">Music</div>
-      <div class="interest-card">Reading</div>
-      <div class="interest-card">Drawing</div>
-      <div class="interest-card">Soccer</div>
-      <div class="interest-card">Coaching</div>
-      <div class="interest-card">Boxing</div>
-      <div class="interest-card">Running</div>
-      <div class="interest-card">Guitar</div>
-      <div class="interest-card">Working Out</div>
-    </div>
-  </section>
-
-
-  <!-- Songs Section -->
-  <section id="songs">
-    <h2>Favorite Songs</h2>
-    <div class="songs-cards">
-      <div class="song-card">Peekaboo - Kendrick Lamar</div>
-      <div class="song-card">WRK - JID</div>
-      <div class="song-card">Not Like Us - Kendrick Lamar</div>
-    </div>
-  </section>
+    nextBtn.onclick = () => {
+      currentSkill = (currentSkill + 1) % skillCards.length;
+      showSkill(currentSkill);
+    };
+  </script>
 </body>
 </html>

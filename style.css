@@ -13,89 +13,82 @@ body {
 }
 
 
-/* Navigation bar styles */
-nav {
-  display: flex; /* Use flex to align brand and links */
-  align-items: center; /* Vertically center brand and links */
-  background-color: #111; /* Very dark nav background */
-  padding: 10px 0; /* Space above and below links */
+/* Navigation bar styles - Bootstrap navbar with custom styling */
+.navbar {
+  background-color: #111 !important; /* Very dark nav background */
   border-bottom: 2px solid #e94560; /* Red accent line */
-  justify-content: flex-start; /* Start items at the left */
+  padding: 10px 0; /* Space above and below */
 }
 
 
-nav ul {
-  list-style: none; /* Remove bullet points */
-  margin: 0 auto; /* Center the nav links horizontally */
-  padding: 0;
-  text-align: center; /* Center the nav links */
-  display: flex;
-  flex: 1;
-  justify-content: center; /* Center links in the available space */
-}
-
-
-nav ul li {
-  display: inline; /* Show links in a row */
-  margin: 0 15px; /* Space between links */
-}
-
-
-nav ul li a {
-  color: #e94560; /* Red accent color for links */
-  text-decoration: none; /* Remove underline */
+/* Bootstrap nav link overrides */
+.navbar-nav .nav-link {
+  color: #e94560 !important; /* Red accent color for links */
   font-weight: bold;
   padding: 6px 12px; /* Add some space around links */
-  border-radius: 4px; /* Rounded corners on hover */
+  border-radius: 4px; /* Rounded corners */
   transition: background 0.2s;
+  margin: 0 8px; /* Space between links */
 }
 
 
-nav ul li a:hover {
-  background: #222; /* Slightly lighter on hover */
+.navbar-nav .nav-link:hover {
+  background: #222 !important; /* Slightly lighter on hover */
+  color: #e94560 !important; /* Keep red color on hover */
 }
 
 
-/* Nav brand (your name) styles */
-.nav-brand {
-  color: #e94560; /* Red accent color */
+/* Nav brand (your name) styles - Bootstrap navbar-brand with custom styling */
+.navbar-brand.nav-brand {
+  color: #e94560 !important; /* Red accent color */
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* Professional, sleek font */
   font-size: 1.6em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-left: 32px; /* Add space from the left edge */
-  margin-right: 48px; /* More space between name and nav links */
+  font-weight: 600; /* Semi-bold for professional look */
+  letter-spacing: 1px; /* Slightly tighter spacing for sleek appearance */
   padding: 4px 18px; /* Padding for a sleeker look */
   border-radius: 8px; /* Slightly rounded corners */
   background: rgba(34,34,59,0.7); /* Subtle dark background for contrast */
   box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for depth */
   transition: background 0.2s, color 0.2s;
+  text-decoration: none; /* Remove underline */
 }
 
 
-.nav-brand:hover {
-  background: #e94560;
-  color: #fff;
+.navbar-brand.nav-brand:hover {
+  background: #e94560 !important;
+  color: #fff !important;
 }
 
 
-/* Hero section styles */
+/* Bootstrap navbar toggler styling for mobile */
+.navbar-toggler {
+  border-color: #e94560; /* Red border for toggle button */
+}
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e94560' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Hero section styles - Bootstrap compatible */
 #hero {
   background-color: #18191a; /* Dark gray background that matches the site theme */
-  text-align: center; /* Center text */
-  padding: 40px 10px; /* Space around content */
+  padding: 40px 15px; /* Space around content, compatible with Bootstrap */
   border-bottom: 2px solid #e94560; /* Red accent line */
-  box-sizing: border-box; /* Include padding in width */
-  max-width: none; /* Remove max-width so it fills the page */
-  width: 100%; /* Make hero section fill the width of the page */
-  margin: 0; /* Remove auto margin so it stretches edge to edge */
-  border-radius: 0; /* Remove rounded corners for full width */
   box-shadow: 0 2px 12px rgba(0,0,0,0.25); /* Slightly stronger shadow */
-  position: relative; /* For overlay if needed */
+  margin-bottom: 20px; /* Space below hero section */
 }
 
 
-#hero::before {
-  content: none; /* Remove overlay since hero no longer has a background image */
+/* Bootstrap display and lead classes work with our color scheme */
+#hero .display-4 {
+  color: #e94560 !important; /* Red accent for main heading */
+}
+
+
+#hero .lead {
+  color: #f2f2f2; /* Light text for subtitle */
 }
 
 
@@ -113,15 +106,20 @@ nav ul li a:hover {
 }
 
 
-/* Section styles */
+/* Section styles - Bootstrap container compatible */
 section {
   background-color: #232323; /* Slightly lighter than body */
-  margin: 20px auto; /* Space above and below sections */
-  padding: 20px; /* Space inside sections */
-  max-width: 600px; /* Limit section width */
+  margin: 20px 0; /* Space above and below sections */
+  padding: 30px; /* Space inside sections */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Subtle shadow */
   border-left: 4px solid #e94560; /* Red accent bar */
+}
+
+
+/* Bootstrap container spacing adjustments */
+.container {
+  margin-bottom: 20px; /* Space between container sections */
 }
 
 
