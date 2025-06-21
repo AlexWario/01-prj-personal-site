@@ -370,6 +370,22 @@ body {
     padding: 0.875rem 1.25rem;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  /* Make outline button solid on mobile for better visibility */
+  #resume .btn-outline-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+  }
+  
+  #resume .btn-outline-primary:hover {
+    background-color: var(--accent-warm);
+    border-color: var(--accent-warm);
+    color: white;
   }
 }
 
