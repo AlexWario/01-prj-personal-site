@@ -321,6 +321,58 @@ body {
   transform: translateY(-2px);
 }
 
+/* Resume Section Styling */
+.resume-update-note {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+#resume .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 74, 41, 0.2);
+}
+
+#resume .btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 74, 41, 0.3);
+}
+
+#resume .btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+#resume .btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #resume .btn-primary, #resume .btn-outline-primary {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* Footer */
 .footer {
   background: var(--bg-dark);
